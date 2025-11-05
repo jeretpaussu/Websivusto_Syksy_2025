@@ -24,7 +24,6 @@ p {
     }
     
     body {
-      color: blue;
       background-color: rgb(242, 209, 209);
     }
     
@@ -88,6 +87,13 @@ table {
     input[type="submit"]:hover {
       background-color: #45a049;
     }
+
+.content-box {
+  padding: 20px;
+  margin: 10px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+}
 
 .animation-box {
         width: 50px;
