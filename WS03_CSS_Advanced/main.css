@@ -53,16 +53,16 @@ table {
       text-align: left;
     }
     th {
-      background-color: #fffefe;
+      background-color: #ffffff;
     }
     td {
-      background-color: #f9f9f9;
+      background-color: #ffffff;
     }
     
     form {
       display: flex;
       flex-direction: column;
-      gap: 10px;
+      gap: 5px;
     }
     
     label {
@@ -96,31 +96,87 @@ table {
 }
 
 .animation-box {
-        width: 50px;
-        height: 50px;
-        background-color: rgb(0, 0, 0);
+        width: 100px;
+        height: 100px;
+        padding: 20px;
+        margin: 10px;
+        background-color: rgb(242, 209, 209);
         position: relative;
-        animation: move 5s infinite alternate;
+        animation: move 10s linear infinite;
       }
       
       @keyframes move {
-        from {
+        0% {
           left: 0;
         }
-        to {
-          left: 1840px;
+        48% {
+          transform: rotateY(0deg); 
+        }
+        50% {
+          left: calc(100% - 150px);
+          transform: rotateY(180deg);
+        }
+        98% {
+          transform: rotateY(180deg);
+        }
+        100% {
+          left: 0;
+          transform: rotateY(0deg);
         }
       }
 
-pseudo-list li:nth-child(odd) {
-        background-color: lightgray;
-      }
-      
-      .pseudo-list li:nth-child(even) {
-        background-color: white;
+
+
+.pseudo-list li:nth-child(odd) {
+  padding: 5px;
+  background-color: lightgray;
+}
+
+
+.pseudo-list li:nth-child(even) {
+  padding: 5px;
+  background-color: white;
+}
+
+.pseudo-list{
+        display: flex;
+        background-color: #0afdd5;
+        gap: 2px;
+        flex-direction: column;
+        border: 2px solid #000;
+        color: #000000;
       }
 
-.pseudo-list {
-        border: 1px solid #000;
-        color: #ff0000;
-      }
+.filter-image {
+  filter: grayscale(100%) brightness(10%) blur(5px);
+  
+  padding: 10px;
+  transition: filter 3s ease;
+  }
+  .filter-image:hover {
+    padding: 10px;
+    filter: grayscale(0%) brightness(100%) blur(0px);
+  }
+
+.quote {
+  color: #014104;
+  position: relative;
+  padding-left: 20px;
+  font-style: italic;
+}
+  .quote::before {
+    content: '"';
+    font-size: 40px;
+    position:absolute;
+    left: -0.05em;
+    top: 0.2em;
+    color: rgb(0, 0, 0);
+  }
+  .quote::after {
+    content: '"';
+    font-size: 40px;
+    position:absolute;
+    left: 9.5em;
+    bottom: -0.5em;
+    color: rgb(0, 0, 0);
+  }
