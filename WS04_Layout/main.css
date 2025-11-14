@@ -1,0 +1,222 @@
+.transition-button {
+      background-color: lightblue;
+      border: none;
+      color: black;
+      padding: 10px 20px;
+      text-align: left;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+      transition-duration: 1s;
+    }
+    .transition-button:hover {
+      background-color: rgb(242, 209, 209);
+      color: black;
+    }
+    
+    h1 {
+      color: rgb(31, 155, 155);
+    }
+p {
+      color: rgb(155, 155, 31);
+    }
+    
+    body {
+      background-color: rgb(242, 209, 209);
+    }
+    
+    h1 {
+      font-size: 3em;
+    }
+    p {
+      font-size: 1.5em;
+    }
+
+body {
+    font-family: monospace;
+}
+ul {
+    font-family: Arial;
+}
+li {
+  list-style: circle;
+}
+table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    th, td{
+      border: 1px solid #050000;
+      padding: 8px;
+      text-align: left;
+    }
+    th {
+      background-color: #ffffff;
+    }
+    td {
+      background-color: #ffffff;
+    }
+    
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+    
+    label {
+      font-weight: bold;
+    }
+    
+    input[type="text"], input[type="email"] {
+      padding: 8px;
+      border: 1px solid #f4f4f4;
+      border-radius: 4px;
+    }
+    
+    input[type="submit"] {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+
+.content-box {
+  padding: 20px;
+  margin: 10px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+}
+
+.animation-box {
+        width: 100px;
+        height: 100px;
+        padding: 20px;
+        margin: 10px;
+        background-color: rgb(242, 209, 209);
+        position: relative;
+        animation: move 10s linear infinite;
+      }
+      
+      @keyframes move {
+        0% {
+          left: 0;
+        }
+        48% {
+          transform: rotateY(0deg); 
+        }
+        50% {
+          left: calc(100% - 150px);
+          transform: rotateY(180deg);
+        }
+        98% {
+          transform: rotateY(180deg);
+        }
+        100% {
+          left: 0;
+          transform: rotateY(0deg);
+        }
+      }
+
+
+
+.pseudo-list li:nth-child(odd) {
+  padding: 5px;
+  background-color: lightgray;
+}
+
+
+.pseudo-list li:nth-child(even) {
+  padding: 5px;
+  background-color: white;
+}
+
+.pseudo-list{
+        display: flex;
+        background-color: #0afdd5;
+        gap: 2px;
+        flex-direction: column;
+        border: 2px solid #000;
+        color: #000000;
+      }
+
+.filter-image {
+  filter: grayscale(100%) brightness(10%) blur(5px);
+  
+  padding: 10px;
+  transition: filter 3s ease;
+  }
+  .filter-image:hover {
+    padding: 10px;
+    filter: grayscale(0%) brightness(100%) blur(0px);
+  }
+
+.quote {
+  color: #014104;
+  position: relative;
+  padding-left: 20px;
+  font-style: italic;
+}
+  .quote::before {
+    content: '"';
+    font-size: 40px;
+    position:absolute;
+    left: -0.05em;
+    top: 0.2em;
+    color: rgb(0, 0, 0);
+  }
+  .quote::after {
+    content: '"';
+    font-size: 40px;
+    position:absolute;
+    left: 9.5em;
+    bottom: -0.5em;
+    color: rgb(0, 0, 0);
+  }
+
+.flex-container {
+  display:flex;
+  justify-content: space-around;
+  align-items: center;
+  }
+  .flex-item {
+  background-color: rgb(102, 110, 255);
+  padding: 20px;
+  text-align: center;
+  color: white;
+  }
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  margin: 10px;
+  }
+  .grid-item {
+  background-color: lightgreen;
+  padding: 20px;
+  text-align: center;
+  color: #000;
+  }
+
+.responsive-box {
+  padding: 20px;
+  text-align: center;
+  }
+  @media (max-width: 600px) {
+    .responsive-box {
+      background-color: lightcoral;
+    }
+  }
+  @media (min-width: 601px) {
+    .responsive-box {
+      background-color: lightseagreen;
+    }
+  }
+
