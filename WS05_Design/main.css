@@ -245,3 +245,33 @@ input[type="submit"]:hover {
     background-color: lightblue;
   }
 }
+
+.responsive-image {
+  max-width: 100%;
+  height: auto;
+}
+
+.responsive-nav .nav-list {
+  display: flex;
+  list-style: none;
+}
+
+@media (max-width: 600px) {
+  .responsive-nav .nav-list {
+    display: none;
+    flex-direction: column;
+  }
+  .responsive-nav .menu-toggle {
+    display: block;
+    background-color: #4caf50;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+  }
+}
+
+menu.nav-list li {
+  list-style: none;
+  margin: 0 10px;
+}
