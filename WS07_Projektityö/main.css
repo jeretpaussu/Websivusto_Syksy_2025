@@ -8,7 +8,7 @@ footer {
 
 .carousel-item img {
   max-width: 100%;
-  max-height: 100vh;
+  max-height: 80vh;
   object-fit: cover;
   border: 2px solid #000;
 }
@@ -31,4 +31,65 @@ h6 {
 .alert {
   margin: 20px;
   text-align: center;
+}
+
+.card-text1 {
+  color: #3134f8;
+}
+.card-text2 {
+  color: #ff01ea;
+}
+.card-text3 {
+  color: #fd0000;
+}
+
+.animation-box {
+  width: 100px;
+  height: 100px;
+  padding: 5px;
+  margin-bottom: 35px;
+  background-color: rgb(255, 255, 255);
+  position: relative;
+  animation: move 20s linear infinite;
+}
+
+@keyframes move {
+  0% {
+    left: 0;
+  }
+  48% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    left: calc(100% - 110px);
+    transform: rotateY(180deg);
+  }
+  98% {
+    transform: rotateY(180deg);
+  }
+  100% {
+    left: 0;
+    transform: rotateY(0deg);
+  }
+}
+
+.animation-box-2 {
+        width: 100px;
+        height: 30px;
+        padding: 5px;
+        background-color: rgb(255, 255, 255);
+        position: relative;
+        animation: follow 20s linear infinite;
+    } 
+
+@keyframes follow {
+  0% {
+    left: 0;
+  }
+  50% {
+    left: calc(100% - 110px);
+  }
+  100% {
+    left: 0;
+  }
 }

@@ -265,3 +265,22 @@ input[type="submit"]:hover {
 body {
   border: 5px solid rgb(255, 255, 255);
 }
+
+.alert {
+  margin: 20px;
+  text-align: center;
+}
+
+.button-idk {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #b9b9b9;
+  margin: 20px;
+}
+
+.container {
+  border: 2px solid pink;
+  padding: 10px;
+  margin: 10px;
+}
