@@ -1,0 +1,51 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  margin: 10px;
+}
+.grid-item {
+  background-color: rgb(181, 238, 181);
+  border: 1px solid #000;
+  padding: 20px;
+  text-align: center;
+  color: #000;
+}
+
+.pseudo-list li:nth-child(odd) {
+  padding: 5px;
+  background-color: lightgray;
+}
+
+.pseudo-list li:nth-child(even) {
+  padding: 5px;
+  background-color: white;
+}
+
+.pseudo-list {
+  display: flex;
+  background-color: rgb(181, 238, 181);
+  flex-direction: column;
+  border: 2px solid #000;
+  border-right: 35px solid rgb(181, 238, 181);
+  color: #000000;
+}
+
+.pseudo-list li:hover {
+  background-color: rgb(181, 238, 181); /* Taustaväri hoverissa */
+  color: #f300fc; /* Vaihtaa väriä hoverissa */
+}
+
+.hover-disappear-button {
+  opacity: 1; /* Aluks kokonaan näkyvissä */
+  transition: 0.3s ease-in-out; /* Smooth katoaminen */
+  padding: 20px 40px; /* Vähän suurempi, että helpompi hoverata */
+  background-color: #25b145;
+  color: white;
+  border-radius: 20px; /* Pyöristetyt reunat */
+  box-shadow: 8px 8px 8px rgb(0, 0, 0); /* Varjo boksille*/
+}
+
+.hover-disappear-button:hover {
+  opacity: 0; /* Tulee täysin läpinäkyväksi hoverin aikana */
+}

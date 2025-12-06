@@ -1,22 +1,22 @@
 footer {
-  color: white;
-  text-align: center;
-  padding: 10px;
-  background-color: black;
-  margin-top: 20px;
+  color: white; /* Valkoinen teksti */
+  text-align: center; /* Keskitetty teksti */
+  padding: 10px; 
+  background-color: black; /* Musta taustaväri */
+  margin-top: 20px; /* Yläreunaan tilaa */
 }
 
 .carousel-item img {
-  max-width: 100%;
-  max-height: 80vh;
+  max-width: 100%; /* Leveys maksimissaan 100%, että kuva on laidasta laitaan */
+  max-height: 80vh; /* Pienensin vähän kuvan korkeutta, että mahtuu paremmin ruudulle */
   object-fit: cover;
-  border: 2px solid #000;
+  border: 2px solid #000; /* Musta kehys kuvalle */
 }
 
 .carousel-caption {
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 10px;
-  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.5); /* Läpinäkyvä musta tausta tekstille */
+  padding: 10px; /* Sisennys tekstille */
+  border-radius: 5px; /* Pyöristetyt kulmat */
 }
 
 h1,
@@ -25,71 +25,87 @@ h3,
 h4,
 h5,
 h6 {
-  text-align: center;
+  text-align: center; /* Keskitys otsikoille */
+}
+
+.main-title {
+  font-family: Impact, "Arial Narrow Bold", sans-serif; /* Muutin fontin */
+  text-decoration: underline; /* Alleviivaus otsikolle*/
+  text-decoration-style: double; /* Tuplaviiva */
+  font-style: italic; /* Kallistettu fontti */
+  font-size: 100px; /* Suurempi fonttikoko */
+  margin-bottom: 20px; /* Lisää tilaa otsikon alle */
 }
 
 .alert {
-  margin: 20px;
-  text-align: center;
+  margin: 20px; /* Lisää tilaa */
+  text-align: center; /* Keskittää tekstin */
 }
 
 .card-text1 {
-  color: #3134f8;
+  color: #3134f8; /* Vaihdoin korttien värit */
 }
 .card-text2 {
-  color: #ff01ea;
+  color: #ff01ea; /* Vaihdoin korttien värit */
 }
 .card-text3 {
-  color: #fd0000;
+  color: #fd0000; /* Vaihdoin korttien värit */
 }
 
 .animation-box {
   width: 100px;
   height: 100px;
   padding: 5px;
-  margin-bottom: 35px;
-  background-color: rgb(255, 255, 255);
-  position: relative;
-  animation: move 20s linear infinite;
+  margin-bottom: 35px; /* Alareunaan vähän lisää tilaa, kun muuten jää liian lähelle seuraavaa elementtiä */
+  background-color: rgb(
+    255,
+    255,
+    255
+  ); /* Taustaväri valkoiseksi, että animaatio sopii taustaan */
+  position: relative; /* Tarvitaan animaatiota varten */
+  animation: move 20s linear infinite; /* Animaation kesto ja toisto */
 }
 
 @keyframes move {
   0% {
-    left: 0;
+    left: 0; /* Alkuasento */
   }
   48% {
-    transform: rotateY(0deg);
+    transform: rotateY(0deg); /* Kääntymätön vaihe */
   }
   50% {
-    left: calc(100% - 110px);
-    transform: rotateY(180deg);
+    left: calc(100% - 110px); /* Siirtyy oikeaan reunaan */
+    transform: rotateY(180deg); /* Kääntyy ympäri */
   }
   98% {
-    transform: rotateY(180deg);
+    transform: rotateY(180deg); /* Kääntynyt vaihe */
   }
   100% {
-    left: 0;
-    transform: rotateY(0deg);
+    left: 0; /* Palaa alkuasentoon */
+    transform: rotateY(0deg); /* Palautuu alkuperäiseen asentoon */
   }
 }
 
 .animation-box-2 {
-        width: 100px;
-        height: 30px;
-        padding: 5px;
-        background-color: rgb(255, 255, 255);
-        position: relative;
-        animation: follow 20s linear infinite;
-    } 
+  width: 100px;
+  height: 30px;
+  padding: 5px;
+  background-color: rgb(255, 255, 255);
+  position: relative;
+  animation: follow 20s linear infinite; /* Piti tehdä uusi animaatio ilman kiertoa, koska muuten näyttää oudolta */
+}
 
 @keyframes follow {
   0% {
+    /* Alkuasento */
     left: 0;
   }
   50% {
+    /* Siirtyy oikeaan reunaan */
     left: calc(100% - 110px);
   }
   100% {
+    /* Palaa alkuasentoon */
     left: 0;
   }
 }

@@ -1,31 +1,55 @@
 .image-item img {
-  width: 150px; /* Set a fixed width */
-  height: 150px; /* Set a fixed height to make it square */
-  object-fit: cover; /* Ensures the image covers the area without distortion */
-  border-radius: 50%; /* Makes the image circular */
-  display: block; /* Removes extra space below the image */
-  margin: 0 auto 10px auto; /* Center the image and add space below */
+  width: 150px; /* Leveys */
+  height: 150px; /* Korkeus */
+  border: black 2px solid; /* Musta kehys */
+  object-fit: cover; /* Kuvan skaalaus täyttämään laatikko */
+  border-radius: 50%;  /* Pyöreät reunat */
+  display: block;  /* Estää inline-tilan */
+  margin: 0 auto 10px auto; /* Keskittää kuvan ja lisää tilaa alapuolelle */
 }
 
 .image-container {
-  display: flex; /* Arranges items in a row */
-  justify-content: space-around; /* Distributes items evenly with space around them */
-  align-items: flex-start; /* Aligns items to the start of the cross axis */
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
   padding: 20px;
   background-color: #f0f0f0;
 }
 
 .container {
-  display: flex; /* Makes the container a flex container */
-  justify-content: space-between; /* Distributes space between items */
-  align-items: center; /* Vertically aligns items in the center */
-  /* Optional: Add padding or max-width for better presentation */
-  max-width: 1200px; /* Example max width */
-  margin: 0 auto; /* Center the container on the page */
-  padding: 20px; /* Example padding */
+  display: flex;
+  justify-content: space-between; /* Jakaa tilan tasaisesti */
+  align-items: center; /* Keskitys pystysuunnassa */
+  margin: 0 auto; /* Keskitys vaakasuunnassa */
+  padding: 20px; /* Sisennys */
+  max-width: 1200px; /* Maksimileveys */
 }
 
 .left-content {
-  flex: 1; /* Allows left-content to grow and take available space */
-  padding-right: 20px; /* Add some space between text and image */
+  padding-right: 20px; /* Tekstin ja kuvan väliin tilaa */
+}
+
+
+.right-content img{
+  max-width: 100%; height: auto; /* Jotta kuva toimii paremmin pienemmilläkin näytöillä */
+  border: black 5px solid; /* Musta kehys kuvalle */
+  border-radius: 15px 50px; /* Sai vähän muotoa kuvaan */
+}
+
+.image-container h2 {
+  text-align: center;
+  text-decoration: overline underline; /* Yliviivaus ja alivivaus */
+  color: rgba(0, 0, 0, 0.849);
+  text-underline-offset: 0.5em; /* Piti laittaa että teksti on paremmin viivojen keskellä */
+}
+
+.fun-fact {
+  text-align: center; /* Keskitys */
+  background-color: #bedbf5; /* Vaaleansininen tausta */
+  border: 2px solid #75d2f1; /* Sininen reunus */
+  border-left: 15px solid #333; /* Paksumpi vasen reunus */
+  border-right: 15px solid #333; /* Paksumpi oikea reunus */
+  padding: 15px;
+  margin: 20px 0; /* Ylä- ja alareunaan tilaa */
+  font-style: italic; /* Kallistettu fontti */
 }
